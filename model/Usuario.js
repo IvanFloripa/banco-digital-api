@@ -15,7 +15,9 @@ const Usuario = connection.define('usuario', {
         type: Sequelize.TEXT,
         allowNull: false
     }
-},{schema:'banco_digital'});
+},{
+    freezeTableName: true,
+    schema:'public'});
 
 
 Usuario.sync({force:false}).then(()=>{});

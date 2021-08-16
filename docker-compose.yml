@@ -1,30 +1,44 @@
 version: '3'
 
 services:
-  api_catalog:
-    container_name: api_catalog
-    build: ./api_catalog
-    command: node app.js
+  postgres_db:
+    container_name: postgres_db
+    image: "postgres:12"
     ports:
-      - '3000:3000'
+      - '5431:5432'
+    expose:
+      - '5431'
+    networks:
+      - backend
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: banco_digital
+      POSTGRES_PASSWORD: 1234
     volumes:
-      - ./api_catalog:/srv/app
-  recomendations_frontend:
-    image: node:14
-    container_name: recomendations_frontend
+      - db-data:/var/lib/postgresql/data
+  banco_digital_api:
+    container_name: banco_digital_api
+    build: ./
+    command: ["nodemon", "index.js"]
+    environment:
+      PGUSER: postgres
+      PGDATABASE: banco_digital
+      PGPASSWORD: 1234
+      PGHOST: 127.0.0.1
     ports:
-      - '8080:8080'
+      - '4000:4000'
     volumes:
-      - ./api_recommendations/frontend/:/srv/app
-    working_dir: /srv/app
-    command: 'npm install axios --save'
-    command: 'npm run serve'
-  recomendations_backend:
-    container_name: recomendations_backend
-    build: ./api_recommendations/backend/
-    command: npm install axios --save
-    command: nodemon app.js
-    ports:
-      - '3001:3001'
-    volumes:
-      - ./api_recommendations/backend/:/srv/app
+      - ./:/srv/app
+    restart: on-failure
+    # depends_on:
+    #   - postgres_db
+    networks:
+      - backend
+networks:
+  backend:
+    driver: 'bridge'
+volumes:
+  db-data:
+
+
+        

@@ -1,17 +1,19 @@
 const express = require('express');
 const app = express();
 const connection = require('./config/database');
-const Pergunta = require('./model/Pergunta');
 const Usuario = require('./model/Usuario');
 
-connection
-    .authenticate()
-    .then(() => {
+async function connectPg(){
+    try{
+        await connection.authenticate();
         console.log("Conexão feita com o banco de dados!");
-    })
-    .catch((msgErro) =>{
-        console.log(msgErro);
-    })
+
+    }catch(error){
+        console.log(error);
+
+    }
+}
+connectPg();
 app.get('/', (req, res) => {
     res.send('Rodando Aplicação Nodejs');
 });
