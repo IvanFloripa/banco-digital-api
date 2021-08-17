@@ -41,9 +41,10 @@ Para executar o container do Projeto basta executar o comando <code>docker-compo
 Utilizado o Postman para executar as requisições do Projeto
 
 ### Teste de Endpoints do Projeto via POSTMAN
+
+![Alt text](/../master/screenshots/criar-usuario.png?raw=true "Optional Title")
 ```
 - Criar Usuários
-![Alt text](/../master/screenshots/criar-usuario.png?raw=true "Optional Title")
 URL: http://localhost:4000/usuarios/criar
 JSON: 
 {
@@ -52,9 +53,9 @@ JSON:
 }
 ```
 
+![Alt text](/../master/screenshots/criar-conta-corrente.png?raw=true "Optional Title")
 ```
 - Criar Conta Corrente
-![Alt text](/../master/screenshots/criar-conta-corrente.png?raw=true "Optional Title")
 
 URL: http://localhost:4000/conta-corrente/criar
 JSON: 
@@ -64,10 +65,9 @@ JSON:
 }
 ```
 
+![Alt text](/../master/screenshots/depositar.png?raw=true "Optional Title")
 ```
 - Depositar
-![Alt text](/../master/screenshots/depositar.png?raw=true "Optional Title")
-
 URL: http://localhost:4000/conta-corrente/depositar
 JSON: 
 {
@@ -76,9 +76,9 @@ JSON:
 }
 ```
 
+![Alt text](/../master/screenshots/sacar.png?raw=true "Optional Title")
 ```
 - Sacar
-![Alt text](/../master/screenshots/sacar.png?raw=true "Optional Title")
 
 URL: http://localhost:4000/conta-corrente/sacar
 JSON: 
@@ -87,10 +87,9 @@ JSON:
     "valor": 700
 }
 ```
-
+![Alt text](/../master/screenshots/conta-corrente/depositar.png?raw=true "Optional Title")
 ```
 - Saldo
-![Alt text](/../master/screenshots/conta-corrente/depositar.png?raw=true "Optional Title")
 
 URL: http://localhost:4000/conta-corrente/sacar
 JSON: 
