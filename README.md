@@ -87,7 +87,7 @@ JSON:
     "valor": 700
 }
 ```
-![Alt text](/../master/screenshots/conta-corrente/depositar.png?raw=true "Optional Title")
+![Alt text](/../master/screenshots/conta-corrente/saldo.png?raw=true "Optional Title")
 ```
 - Saldo
 
