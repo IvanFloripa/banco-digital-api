@@ -41,7 +41,6 @@ Para executar o container do Projeto basta executar o comando <code>docker-compo
 Utilizado o Postman para executar as requisições do Projeto
 
 ### Teste de Endpoints do Projeto via POSTMAN
-```node#
 - Criar Usuários
 URL: http://localhost:4000/usuarios/criar
 JSON: 
@@ -53,6 +52,4 @@ JSON:
 
 
 ## RESTAURAR PROJETO:
-```c#
 - gh repo clone IvanFloripa/banco-digital-api
-```
