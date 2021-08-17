@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const ContaCorrente = require('../model/ContaCorrente');
+const modelValidate = require('../model/ValidateContaCorrente');
 
 router.post('/conta-corrente/criar',(req,res)=>{
     var agencia = req.body.agencia;
@@ -51,8 +52,18 @@ router.post('/conta-corrente/sacar',(req,res)=>{
     ContaCorrente.findOne({
         where: {numero: numero},
     }).then(ContaCorrente =>{
+        //Valida Parametros
+        
         let valueBd = parseFloat(ContaCorrente.saldo);
         let value2 = parseFloat(valor);
+        let retornoVal = modelValidate.validateConta(valueBd, value2);
+        let erro = null;
+        if(retornoVal){
+            erro = {
+                msg:'Você não possui saldo suficiente'
+            }
+            res.send(erro);
+        }
         soma = valueBd - value2;
         ContaCorrente.update({saldo: soma},{
         where:{numero: numero}
