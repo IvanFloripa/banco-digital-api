@@ -31,4 +31,6 @@ ENTÃO a query retornará o saldo atualizado.
 Uso da Comunicação da API foi feito em ORM Sequelize, com NodeJs e Express.
 
 ### Banco de Dados
-Postgresql, configuração via docker-compose
+Postgresql, as credenciais do banco de dados ficam em <code>docker-compose.yml</code> que fica na raiz do projeto:
+![Alt text](/../<branch name>/path/to/image.png?raw=true "Optional Title")
+
