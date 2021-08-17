@@ -5,6 +5,7 @@ FROM node:14.0
 COPY package*.json ;/
 RUN npm install express --save
 RUN npm install -g nodemon 
+RUN npm install -g jest
 
 
 COPY . .
