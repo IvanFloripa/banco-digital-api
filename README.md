@@ -49,7 +49,7 @@ URL: http://localhost:4000/usuarios/criar
 JSON: 
 {
     "nome": "antonia",
-	"CPF": "11056007001"
+    "CPF": "11056007001"
 }
 ```
 
@@ -61,7 +61,7 @@ URL: http://localhost:4000/conta-corrente/criar
 JSON: 
 {
     "agencia": 9878,
-	"numero": "7890"
+    "numero": "7890"
 }
 ```
 
@@ -71,7 +71,7 @@ JSON:
 URL: http://localhost:4000/conta-corrente/depositar
 JSON: 
 {
-	"numero": "7890",
+    "numero": "7890",
     "valor": 1000
 }
 ```
@@ -83,7 +83,7 @@ JSON:
 URL: http://localhost:4000/conta-corrente/sacar
 JSON: 
 {
-	"numero": "7890",
+    "numero": "7890",
     "valor": 700
 }
 ```
