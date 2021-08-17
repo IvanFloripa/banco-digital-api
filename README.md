@@ -27,10 +27,25 @@ DADO QUE eu consuma a API
 QUANDO eu chamar a query saldo informando o número da conta
 ENTÃO a query retornará o saldo atualizado.
 
-### Estrutura da API
+### Descrição da API 
 Uso da Comunicação da API foi feito em ORM Sequelize, com NodeJs e Express.
 
 ### Banco de Dados
 Postgresql, as credenciais do banco de dados ficam em <code>docker-compose.yml</code> que fica na raiz do projeto:
 ![Alt text](/../master/screenshots/config_banco.png?raw=true "Optional Title")
 
+###Executar o Projeto
+Para executar o container do Projeto basta executar o comando <code>docker-compose up</code>
+
+###Teste de Requisições
+Utilizado o Postman para executar as requisições do Projeto
+
+### Teste de Endpoints via POSTMAN
+```c#
+- Criar Usuários
+URL: http://localhost:4000/usuarios/criar
+JSON: 
+{
+    "nome": "antonia",
+	"CPF": "11056007001"
+}
