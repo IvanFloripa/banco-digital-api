@@ -87,11 +87,11 @@ JSON:
     "valor": 700
 }
 ```
-![Alt text](/../master/screenshots/conta-corrente/saldo.png?raw=true "Optional Title")
+![Alt text](/../master/screenshots/saldo.png?raw=true "Optional Title")
 ```
 - Saldo
 
-URL: http://localhost:4000/conta-corrente/sacar
+URL: http://localhost:4000/conta-corrente/saldo
 JSON: 
 {
 	"numero": "7890",
