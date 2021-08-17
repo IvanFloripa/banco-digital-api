@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 
 const connection = new Sequelize(
-    'postgres', 
-    'postgres',
-    1234,
+    process.env.PGDATABASE, 
+    process.env.PGUSER,
+    process.env.PGPASSWORD,
     {
         host: 'postgres_db',
         dialect: 'postgres',

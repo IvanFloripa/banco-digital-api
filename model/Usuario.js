@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 const connection = require('../config/database');
-
-const Usuario = connection.define('usuario', {
+const Usuario = connection.define('usuario_api', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -16,9 +15,5 @@ const Usuario = connection.define('usuario', {
         allowNull: false
     }
 },{
-    freezeTableName: true,
     schema:'public'});
-
-
-Usuario.sync({force:false}).then(()=>{});
 module.exports = Usuario;

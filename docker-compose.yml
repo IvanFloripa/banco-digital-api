@@ -30,8 +30,6 @@ services:
     volumes:
       - ./:/srv/app
     restart: on-failure
-    # depends_on:
-    #   - postgres_db
     networks:
       - backend
 networks:
