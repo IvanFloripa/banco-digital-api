@@ -24,9 +24,13 @@ app.use(express.urlencoded({ extended: true}));
 
 app.use('/', usuarioController);
 app.use('/', contaCorrenteController);
+app.use('/usuarios/criar', contaCorrenteController);
 
 
 
-app.listen(4000,() =>{
-    console.log('Servidor Nodejs rodando');
-})
+if(process.env.NODE_ENV !== 'test'){
+    app.listen(4000,() =>{
+        console.log('Servidor Nodejs rodando');
+    });
+}
+module.exports = app;

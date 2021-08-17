@@ -98,7 +98,11 @@ JSON:
     "valor": 700
 }
 ```
+### Teste Unitário
+![Alt text](/../master/screenshots/test.png?raw=true "Optional Title")
 
+Foi utilizado o Framework Jest Nodejs para validar as requests, afim de teste utilizar <code>npm test</code> dentro do container da api este comando deve ser executado
+```
 ### LINK REPOSITÓRIO DO PROJETO:
 ```
 - gh repo clone IvanFloripa/banco-digital-api

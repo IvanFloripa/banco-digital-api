@@ -3,7 +3,6 @@ const router = express.Router();
 const ContaCorrente = require('../model/ContaCorrente');
 
 router.post('/conta-corrente/criar',(req,res)=>{
-    console.log('teste');
     var agencia = req.body.agencia;
     var numero = req.body.numero;
     var titular = req.body.titular;
