@@ -99,7 +99,7 @@ JSON:
 }
 ```
 
-### RESTAURAR PROJETO:
+### LINK REPOSITÓRIO DO PROJETO:
 ```
 - gh repo clone IvanFloripa/banco-digital-api
 ```
