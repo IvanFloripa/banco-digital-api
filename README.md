@@ -43,6 +43,7 @@ Utilizado o Postman para executar as requisições do Projeto
 ### Teste de Endpoints do Projeto via POSTMAN
 ```
 - Criar Usuários
+![Alt text](/../master/screenshots/criar-usuario.png?raw=true "Optional Title")
 URL: http://localhost:4000/usuarios/criar
 JSON: 
 {
@@ -51,7 +52,53 @@ JSON:
 }
 ```
 
+```
+- Criar Conta Corrente
+![Alt text](/../master/screenshots/criar-conta-corrente.png?raw=true "Optional Title")
 
+URL: http://localhost:4000/conta-corrente/criar
+JSON: 
+{
+    "agencia": 9878,
+	"numero": "7890"
+}
+```
+
+```
+- Depositar
+![Alt text](/../master/screenshots/depositar.png?raw=true "Optional Title")
+
+URL: http://localhost:4000/conta-corrente/depositar
+JSON: 
+{
+	"numero": "7890",
+    "valor": 1000
+}
+```
+
+```
+- Sacar
+![Alt text](/../master/screenshots/sacar.png?raw=true "Optional Title")
+
+URL: http://localhost:4000/conta-corrente/sacar
+JSON: 
+{
+	"numero": "7890",
+    "valor": 700
+}
+```
+
+```
+- Saldo
+![Alt text](/../master/screenshots/conta-corrente/depositar.png?raw=true "Optional Title")
+
+URL: http://localhost:4000/conta-corrente/sacar
+JSON: 
+{
+	"numero": "7890",
+    "valor": 700
+}
+```
 
 ### RESTAURAR PROJETO:
 ```
